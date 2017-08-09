@@ -7,19 +7,19 @@ const goodbyeMessage = "Good bye. Have a great day!";
 
 const handlers = {
 	'getNumber': function () {
-		var begin = parseInt(this.event.request.intent.slots.begin.value);
-		var end = parseInt(this.event.request.intent.slots.end.value);
+		let begin = parseInt(this.event.request.intent.slots.begin.value);
+		let end = parseInt(this.event.request.intent.slots.end.value);
 		if (isNaN(begin) || isNaN(end)) {
 			this.emit(':tell', 'Hmm, something went wrong. Make sure you are not using negative numbers and try again.')
 		}
 
 		if (begin > end) {
-			var temp = begin;
+			let temp = begin;
 			begin = end;
 			end = temp;
 		}
 
-		var selected = Math.floor(Math.random() * (end - begin + 1)) + begin;
+		const selected = Math.floor(Math.random() * (end - begin + 1)) + begin;
 		this.emit(':tell', selected);
 	},
 	'AMAZON.StopIntent': function () {

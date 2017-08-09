@@ -75,7 +75,7 @@ All
 Randomly picks a number between a range you give.
 
 ### Full Skill Description
-With this skill, your device will be able to randomly pick a number between a range you give (for instance, saying 'give me a random number between 5 and 20').'
+With this skill, your device will be able to randomly pick a number between a range you give (for instance, saying 'give me a random number between 5 and 20').
 
 ### Example Phrases
 1. Alexa, ask Random Number Picker to give me a random number between 100 and 500
