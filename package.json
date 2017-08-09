@@ -1,0 +1,22 @@
+{
+  "name": "random-number-picker",
+  "version": "1.0.0",
+  "description": "A simple randon number picker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "random",
+    "number",
+    "picker",
+    "generator"
+  ],
+  "author": "Kevin Dong",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.11"
+  }
+}
