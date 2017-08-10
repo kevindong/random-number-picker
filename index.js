@@ -1,11 +1,15 @@
 const Alexa = require('alexa-sdk');
 
 const helpMessage = "You can ask me to pick a number between a range you give. For example you can say 'give me a number between 1 and 10'. Negative numbers are not allowed.";
-const welcomeMessage = "Hello, welcome to the random number generator. From what range do you want me to pick a number from? Negative numbers are not allowed.";
+const welcomeMessage = "Hello, welcome to the random number picker. From what range do you want me to pick a number from? Negative numbers are not allowed.";
 const welcomeRepromt = "You can ask me to pick a number between a range of numbers.";
 const goodbyeMessage = "Good bye. Have a great day!";
+const repromptMessage = "There was an error. Please say that again?";
 
 const handlers = {
+	'LaunchRequest': function () {
+		this.emit(':ask', welcomeMessage, welcomeRepromt);
+	},
 	'getNumber': function () {
 		let begin = parseInt(this.event.request.intent.slots.begin.value);
 		let end = parseInt(this.event.request.intent.slots.end.value);
@@ -26,7 +30,7 @@ const handlers = {
 		this.emit(':tell', goodbyeMessage);
 	},
 	'AMAZON.HelpIntent': function () {
-		this.emit(':tell', helpMessage);
+		this.emit(':ask', helpMessage, helpMessage);
 	},
 	'AMAZON.CancelIntent': function () {
 		this.emit(":tell", goodbyeMessage);
@@ -35,7 +39,7 @@ const handlers = {
 		this.emit('AMAZON.StopIntent');
 	},
 	'Unhandled': function () {
-		this.emit(':tell', helpMessage);
+		this.emit(':ask', repromptMessage, repromptMessage);
 	}
 };
 
