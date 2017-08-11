@@ -1,5 +1,5 @@
 # Random Number Picker
-A random number picker for Amazon's Alexa. May or may not be published [here](https://www.amazon.com/2-Ducks-Random-Number-Picker/dp/B074JZ8V5R). Creating this trivial skill was used as a learning experience.
+A random number picker for Amazon's Alexa. Approved and published [here](https://www.amazon.com/2-Ducks-Random-Number-Picker/dp/B074JZ8V5R). Creating this trivial skill was used as a learning experience.
 
 # Caveats
 When testing this skill in Amazon's Developers portal, note that you should *not* use periods after sentences. In real life, no one says "Alexa, give me a random number between 1 and 20 period". Consequently, this is a non-issue.
